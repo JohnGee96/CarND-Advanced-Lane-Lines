@@ -3,11 +3,11 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-MARGIN = 100
+MARGIN = 75
 N_WINDOWS = 9
 MIN_PIXEL = 50
 
-XM_PER_PIX = 3.7/700 # meters per pixel in y dimension
+XM_PER_PIX = 3.7/400 # meters per pixel in y dimension
 YM_PER_PIX = 30/720 # meters per pixel in x dimension
 
 def sliding_win_fit(warped, nwindows=N_WINDOWS, margin=MARGIN,

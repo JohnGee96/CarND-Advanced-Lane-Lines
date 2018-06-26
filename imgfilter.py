@@ -8,9 +8,9 @@ import matplotlib.image as mpimg
 
 KERNEL = 17
 GRAD_X_MAX = 255
-GRAD_X_MIN = 10
+GRAD_X_MIN = 30
 GRAD_Y_MAX = 255
-GRAD_Y_MIN = 10
+GRAD_Y_MIN = 30
 MAG_MAX = 150
 MAG_MIN = 50
 DIR_MAX = np.pi/3

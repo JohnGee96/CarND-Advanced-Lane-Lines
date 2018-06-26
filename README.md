@@ -50,7 +50,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 The image below shows the effect of applying undistortion to the image.
 
-![undist_road]]
+![undist_road]
 
 Although the changes are subtle, the car hood at the two sides in the bottom of the image is clearly unwarped.
 
@@ -72,9 +72,9 @@ Here is a snippet of the parameters I could tune for this step of progressing
 
     KERNEL = 17
     GRAD_X_MAX = 255
-    GRAD_X_MIN = 10
+    GRAD_X_MIN = 30
     GRAD_Y_MAX = 255
-    GRAD_Y_MIN = 10
+    GRAD_Y_MIN = 30
     MAG_MAX = 150
     MAG_MIN = 50
     DIR_MAX = np.pi/3
@@ -94,10 +94,10 @@ This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 190, 720      | 420, 720      | 
-| 600, 447      | 420, 0        |
-| 685, 447      | 840, 0        |
-| 1125,720      | 840, 720      |
+| 190, 720      | 450, 720      | 
+| 600, 447      | 450, 0        |
+| 685, 447      | 850, 0        |
+| 1125,720      | 850, 720      |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
@@ -148,7 +148,7 @@ To do this unit conversion, we can modify the coefficients of the lane of fit as
 The `mx` and `my` corresponds to the ratio of pixels to meter in the x and y direction. For this project the ratio I used are:
 
     mx = 30/720 # meters per pixel in y dimension
-    my = 3.7/700 # meters per pixel in x dimension
+    my = 3.7/400 # meters per pixel in x dimension
 
 The distance that the car is away from the center of the lane is calculated by subtracting the center of the two lanes from the center of the image. The result is in unit pixels so we then multiply by the `mx` ratio mentioned above
 
@@ -166,7 +166,7 @@ Putting every back together, we can transform the bird-eye view image back into 
 
 #### 1. Link to Final Video Output. 
 
-Here's a [link to my video result](https://youtu.be/KTqwNUXCMVQ)
+Here's a [link to my video result](https://youtu.be/nmufpk-M7qE)
 
 ---
 

@@ -11,9 +11,10 @@ NX = 9 # Num of corners in the x direction
 CAL_IMG_PATH = 'camera_cal/calibration*.jpg'
 SAVE_PATH = './presets/calibrate.p'
 
-OFFSET = 250
+OFFSET = 260
 # Corner coordinates picked from "./test_images/straigt_lines1.jpg"
 CORNERS = np.float32([[190,720],[600,447],[685,447],[1125,720]])
+# CORNERS = np.float32([[190,720],[585,455],[700,455],[1130,720]])
 
 def calibrate_camera(save_file=False, cal_img_path=CAL_IMG_PATH, save_path=SAVE_PATH):
     """ 
